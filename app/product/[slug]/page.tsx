@@ -84,7 +84,6 @@ export default async function ProductPage({
                 image={data.images[0]}
                 name={data.name}
                 price={data.price}
-                key={data._id}
                 price_id={data.price_id}
               />
               <CheckoutNow
@@ -93,7 +92,6 @@ export default async function ProductPage({
                 image={data.images[0]}
                 name={data.name}
                 price={data.price}
-                key={data._id}
                 price_id={data.price_id}
               />
             </div>

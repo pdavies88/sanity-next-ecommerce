@@ -1,33 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Next.js Sanity and Stripe E-Commerce
+
+Other dependencies: shadcn, lucide-react, use-shopping-cart
 
 ## Getting Started
+
+Install dependencies
+
+```bash
+npm i
+```
 
 First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Sanity
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- https://www.sanity.io/docs/create-a-sanity-project
+- Project has been created but requires a Project ID to be added to a local .env to run correctly
+- This requires the creation of a new sanity project via sanity.io
+- Once the project is created the Project ID can be found in the sanity.io user dashboard
+- Look at `sample.env` for the variable names to use
 
-## Learn More
+## Stripe
 
-To learn more about Next.js, take a look at the following resources:
+- Create a Stripe account
+- The account does not need to be fully filled out to access developer features it just needs a verified email
+- Once created go to the Stripe Dashboard [https://dashboard.stripe.com/test/dashboard](https://dashboard.stripe.com/test/dashboard)
+- Get API Key of Publishable Key from Dashboard
+- A product catalog will need to be created on Stripe for the products listed in this project
+- The products listed can be found in PRODUCTS.md
+- Once all products have been added into Stripe the Pricing API ID per product from Stripe should be added into Sanity for corelation between the services.
+- In Stripe dashboard [https://dashboard.stripe.com/settings/checkout](https://dashboard.stripe.com/settings/checkout) client only integration needs to be enabled
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## ENV Vars
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Stripe
+- Sanity
 
 ## Deploy on Vercel
 
